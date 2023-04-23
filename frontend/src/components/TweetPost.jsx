@@ -7,7 +7,19 @@ export default function TweetPost() {
 
   function submit(e) {
     e.preventDefault();
-    console.log(input);
+    fetch("http://localhost:8080/tweet", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tweet: input }),
+    }).then((response) => {
+      if (response.status === 200) {
+        setInput("");
+      } else {
+        alert("Something went wrong");
+      }
+    });
   }
   return (
     <Form onSubmit={submit}>
@@ -17,7 +29,8 @@ export default function TweetPost() {
           placeholder="Post an tweet..."
           className="p-1 rounded-0 rounded-top"
           defaultValue={input}
-            onChange={(e) => setInput(e.target.value)}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
       </Form.Group>
       <Button
