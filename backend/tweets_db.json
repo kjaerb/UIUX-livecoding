@@ -5,46 +5,27 @@
         "name": "Me",
         "screen_name": "me"
       },
-      "text": "A sixth tweet"
-    },
-    {
-      "user": {
-        "name": "Me",
-        "screen_name": "me"
-      },
-      "text": "A fifth tweet?"
-    },
-    {
-      "text": "A fourth tweet",
-      "user": {
-        "name": "Me",
-        "screen_name": "me"
-      }
-    },
-    {
       "text": "A third tweet",
-      "user": {
-        "name": "Me",
-        "screen_name": "me"
-      }
+      "img": "https://unsplash.it/1280/720?image=743",
+      "created_at": "2023-04-23T21:04:10.955Z"
     },
     {
       "user": {
         "screen_name": "johndoe",
         "name": "John Doe"
       },
-      "tweet": {
-        "text": "This is a tweet"
-      }
+      "text": "This is a tweet",
+      "img": "https://fastly.picsum.photos/id/129/1280/720.jpg?hmac=cT_IxO5qLYdspZ1bX2nzL9lwHnzY8oHiSFh-v76B15U",
+      "created_at": "2023-03-23T21:04:10.955Z"
     },
     {
       "user": {
         "screen_name": "janedoe",
         "name": "Jane Doe"
       },
-      "tweet": {
-        "text": "This is another tweet"
-      }
+      "text": "This is another tweet",
+      "img": "https://fastly.picsum.photos/id/123/1280/720.jpg?hmac=7ZvqIMzoJfwAy0eMooM7HnLkSItaIwJcjkHOxUcfbso",
+      "created_at": "2023-02-23T21:04:10.955Z"
     }
   ]
 }

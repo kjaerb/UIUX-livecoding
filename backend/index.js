@@ -33,6 +33,10 @@ app.post("/tweet", (req, res) => {
       screen_name: "me",
     },
     text: data.tweet,
+    img: `https://unsplash.it/1280/720?image=${Math.floor(
+      Math.random() * 1000
+    )}`,
+    created_at: new Date().toISOString(),
   };
 
   tweetsDb.tweets.unshift(newTweet);

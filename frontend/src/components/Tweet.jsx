@@ -10,6 +10,8 @@ export function Tweet(props) {
     setLikes(likes + 1);
   }
 
+
+
   return (
       <Card>
         <Card.Header className="d-flex justify-center align-center">
@@ -19,9 +21,10 @@ export function Tweet(props) {
             className="rounded-circle"
             style={{ width: "3rem", height: "3rem" }}
           />
-          <div>
+          <div className="d-flex flex-column">
             <p className="m-0">{props.user.name}</p>
             <small className="text-muted">@{props.user.screen_name}</small>
+            <small className="text-muted">{new Date(props.createdAt).toDateString()}</small>
           </div>
         </Card.Header>
         <Card.Body>
@@ -29,7 +32,7 @@ export function Tweet(props) {
           <Card.Img
             className="rounded"
             variant="bottom"
-            src={`https://unsplash.it/1280/720?image=${Math.floor(Math.random() * 1000)}`}
+            src={props.img}
           />
         </Card.Body>
         <Card.Footer>

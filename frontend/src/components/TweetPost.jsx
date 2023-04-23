@@ -29,7 +29,6 @@ export default function TweetPost() {
           as="textarea"
           placeholder="Post an tweet..."
           className="p-1 rounded-0 rounded-top"
-          defaultValue={input}
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />

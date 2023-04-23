@@ -20,7 +20,7 @@ export default function Index() {
       <div className="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 my-3 mx-auto d-flex flex-column gap-4">
         <TweetPost />
         {tweets.map((tweet, i) => (
-          <Tweet user={tweet.user} tweet={tweet.text} key={i} />
+          <Tweet user={tweet.user} img={tweet.img} tweet={tweet.text} createdAt={tweet.created_at} key={i} />
         ))}
       </div>
   );
