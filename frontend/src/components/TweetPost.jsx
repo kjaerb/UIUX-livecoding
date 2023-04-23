@@ -16,6 +16,7 @@ export default function TweetPost() {
     }).then((response) => {
       if (response.status === 200) {
         setInput("");
+        // window.location.reload();
       } else {
         alert("Something went wrong");
       }

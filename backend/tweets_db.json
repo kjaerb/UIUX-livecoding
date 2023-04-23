@@ -1,15 +1,50 @@
 {
-    "tweets": [{
-        "text": "I'm a tweet!",
-        "user": {
-            "name": "John Doe",
-            "screen_name": "johndoe"
-        }
-    }, {
-        "text": "I'm another tweet!",
-        "user": {
-            "name": "Jane Doe",
-            "screen_name": "janedoe"
-        }
-    }]
+  "tweets": [
+    {
+      "user": {
+        "name": "Me",
+        "screen_name": "me"
+      },
+      "text": "A sixth tweet"
+    },
+    {
+      "user": {
+        "name": "Me",
+        "screen_name": "me"
+      },
+      "text": "A fifth tweet?"
+    },
+    {
+      "text": "A fourth tweet",
+      "user": {
+        "name": "Me",
+        "screen_name": "me"
+      }
+    },
+    {
+      "text": "A third tweet",
+      "user": {
+        "name": "Me",
+        "screen_name": "me"
+      }
+    },
+    {
+      "user": {
+        "screen_name": "johndoe",
+        "name": "John Doe"
+      },
+      "tweet": {
+        "text": "This is a tweet"
+      }
+    },
+    {
+      "user": {
+        "screen_name": "janedoe",
+        "name": "Jane Doe"
+      },
+      "tweet": {
+        "text": "This is another tweet"
+      }
+    }
+  ]
 }

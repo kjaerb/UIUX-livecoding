@@ -3,7 +3,9 @@ import fs from "fs";
 import cors from "cors";
 import bodyParser from "body-parser";
 
-let rawdata = fs.readFileSync("tweets_db.json");
+const path = "tweets_db.json";
+
+let rawdata = fs.readFileSync(path);
 let tweetsDb = JSON.parse(rawdata);
 
 const app = express();
@@ -17,20 +19,29 @@ app.get("/", (req, res) => {
 
 app.get("/tweets", (req, res) => {
   console.log("Tweets called");
+
   res.status(200).send(tweetsDb.tweets);
 });
 
 app.post("/tweet", (req, res) => {
-  let data = req.body;
+  console.log("Posting tweet");
+  const data = req.body;
+
   const newTweet = {
-    text: data.tweet,
     user: {
       name: "Me",
       screen_name: "me",
     },
+    text: data.tweet,
   };
-  tweetsDb.tweets.push(newTweet);
-  res.status(200).send(newTweet);
+
+  tweetsDb.tweets.unshift(newTweet);
+
+  fs.writeFileSync(path, JSON.stringify(tweetsDb, null, 2), (err) => {
+    if (err) res.status(500).send(err);
+  });
+
+  res.status(200).send(tweetsDb);
 });
 
 app.listen(8080, () => {
