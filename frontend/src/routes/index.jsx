@@ -1,4 +1,5 @@
 import { Tweet } from "../components/Tweet";
+import TweetPost from "../components/TweetPost";
 import { useState, useEffect } from "react";
 
 export default function Index() {
@@ -16,10 +17,11 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="col-10 col-md-6 my-3 mx-auto d-flex flex-column gap-4">
-      {tweets.map((tweet, i) => (
-        <Tweet user={tweet.user} tweet={tweet.text} key={i} />
-      ))}
-    </div>
+      <div className="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 my-3 mx-auto d-flex flex-column gap-4">
+        <TweetPost />
+        {tweets.map((tweet, i) => (
+          <Tweet user={tweet.user} tweet={tweet.text} key={i} />
+        ))}
+      </div>
   );
 }

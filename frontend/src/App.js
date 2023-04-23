@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./routes";
 import Header from "./components/Header";
 import MyTweets from "./routes/mytweets";
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -23,9 +24,7 @@ function App() {
           <Route path='/mytweets' element={<MyTweets />} />
         </Routes>
 
-        <footer>
-          <p>Footer</p>
-        </footer>
+        <Footer/>
       </Router>
     </div>
   );
