@@ -1,7 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { useEffect } from "react";
-import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./routes";
+import Header from "./components/Header";
 import MyTweets from "./routes/mytweets";
 
 function App() {
@@ -14,8 +16,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Link to='/'>Home</Link>
-        <Link to='/mytweets'>Public</Link>
+        <Header/>
 
         <Routes>
           <Route path='/' element={<Index />} />
