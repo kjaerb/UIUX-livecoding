@@ -1,0 +1,15 @@
+{
+    "tweets": [{
+        "text": "I'm a tweet!",
+        "user": {
+            "name": "John Doe",
+            "screen_name": "johndoe"
+        }
+    }, {
+        "text": "I'm another tweet!",
+        "user": {
+            "name": "Jane Doe",
+            "screen_name": "janedoe"
+        }
+    }]
+}
