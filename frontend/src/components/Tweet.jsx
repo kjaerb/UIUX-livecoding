@@ -28,7 +28,7 @@ export function Tweet(props) {
           <Card.Img
             className="rounded"
             variant="bottom"
-            src="https://placehold.co/180x100"
+            src={`https://unsplash.it/1280/720?image=${Math.floor(Math.random() * 1000)}`}
           />
         </Card.Body>
         <Card.Footer>
