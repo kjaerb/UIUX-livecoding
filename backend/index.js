@@ -19,14 +19,14 @@ app.get("/", (req, res) => {
 
 app.get("/tweets", (req, res) => {
   console.log("/Tweets called");
-
-  res.status(200).send(tweetsDb.tweets);
+  const result = tweetsDb.tweets.sort(sortByDate);
+  res.status(200).send(result);
 });
 
 app.get("/tweets/:user", (req, res) => {
   console.log("/tweets/:user called");
   const user = req.params.user;
-  const result = tweetsDb.tweets.filter((tweet) => tweet.user.screen_name === user);
+  const result = tweetsDb.tweets.filter((tweet) => tweet.user.screen_name === user).sort(sortByDate);
   res.status(200).send(result);
 });
 
@@ -58,3 +58,7 @@ app.post("/tweet", (req, res) => {
 app.listen(8080, () => {
   console.log("Server running on port 8080");
 });
+
+function sortByDate(a, b) {
+  return new Date(b.created_at) - new Date(a.created_at);
+}
