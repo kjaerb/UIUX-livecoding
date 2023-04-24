@@ -5,7 +5,7 @@ import ImageOverlay from "./ImageOverlay";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export function Tweet(props) {
+export default function Tweet(props) {
   const [likes, setLikes] = useState(0);
   const [showModal, setShowModal] = useState(false);
 

@@ -1,4 +1,4 @@
-import { Tweet } from "../components/Tweet";
+import Tweet from "../components/Tweet";
 import TweetPost from "../components/TweetPost";
 import { useState, useEffect } from "react";
 

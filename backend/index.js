@@ -19,16 +19,16 @@ app.get("/", (req, res) => {
 
 app.get("/tweets", (req, res) => {
   console.log("/Tweets called");
-  const result = tweetsDb.tweets.sort(sortByDate);
+  const result = tweetsDb.tweets;
   res.status(200).send(result);
 });
-
+/*
 app.get("/tweets/:user", (req, res) => {
   console.log("/tweets/:user called");
   const user = req.params.user;
   const result = tweetsDb.tweets.filter((tweet) => tweet.user.screen_name === user).sort(sortByDate);
   res.status(200).send(result);
-});
+});*/
 
 app.post("/tweet", (req, res) => {
   console.log("Posting tweet");

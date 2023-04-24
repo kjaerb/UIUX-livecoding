@@ -1,4 +1,4 @@
-import { Tweet } from "../../components/Tweet";
+import Tweet from "../../components/Tweet";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
