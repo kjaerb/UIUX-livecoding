@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import ImageOverlay from "./ImageOverlay";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Tweet(props) {
   const [likes, setLikes] = useState(0);
@@ -28,7 +29,9 @@ export function Tweet(props) {
             
           />
           <div className="d-flex flex-column">
-            <p className="m-0">{props.user.name}</p>
+            <Link to={"/user/" + props.user.screen_name}>
+              <p className="m-0">{props.user.name}</p>
+            </Link>
             <small className="text-muted">@{props.user.screen_name}</small>
             <small className="text-muted">
               {new Date(props.createdAt).toDateString()}

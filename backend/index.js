@@ -18,9 +18,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/tweets", (req, res) => {
-  console.log("Tweets called");
+  console.log("/Tweets called");
 
   res.status(200).send(tweetsDb.tweets);
+});
+
+app.get("/tweets/:user", (req, res) => {
+  console.log("/tweets/:user called");
+  const user = req.params.user;
+  const result = tweetsDb.tweets.filter((tweet) => tweet.user.screen_name === user);
+  res.status(200).send(result);
 });
 
 app.post("/tweet", (req, res) => {
