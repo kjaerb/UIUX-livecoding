@@ -2,7 +2,7 @@ import Tweet from "../../components/Tweet";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
-export default function Index(params) {
+export default function Index() {
     let { user } = useParams();
   const [tweets, setTweets] = useState([]);
 
